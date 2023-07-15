@@ -10,6 +10,15 @@ public class Cachorro {
     private int tamanhoDoRabo;
     private String estadoDeEspirito;
 
+    public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo, String estadoDeEspirito) {
+        this.nome = nome;
+        this.cor = cor;
+        this.altura = altura;
+        this.peso = peso;
+        this.tamanhoDoRabo = tamanhoDoRabo;
+        this.estadoDeEspirito = estadoDeEspirito;
+    }
+
     public String getNome() {
         return nome;
     }

@@ -5,12 +5,7 @@ import Aula_dois.Animais.Cachorro;
 public class Main {
     public static void main(String[] args) {
 
-        Cachorro cachorroUm = new Cachorro();
-        cachorroUm.setNome("Puppy");
-        cachorroUm.setCor("Marrom");
-        cachorroUm.setAltura(20);
-        cachorroUm.setPeso(2.5);
-        cachorroUm.setTamanhoDoRabo(5);
+        Cachorro cachorroUm = new Cachorro("Puppy", "Marrom", 20, 2.5, 5, "neutro");
 
         cachorroUm.latir();
         System.out.println("O cachorro pegou uma " + cachorroUm.pegar());
