@@ -3,12 +3,60 @@ package Aula_dois.Animais;
 import java.util.Objects;
 
 public class Cachorro {
-    public String nome;
-    public String cor;
-    public int altura;
-    public double peso;
-    public int tamanhoDoRabo;
-    public String estadoDeEspirito;
+    private String nome;
+    private String cor;
+    private int altura;
+    private double peso;
+    private int tamanhoDoRabo;
+    private String estadoDeEspirito;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public int getTamanhoDoRabo() {
+        return tamanhoDoRabo;
+    }
+
+    public void setTamanhoDoRabo(int tamanhoDoRabo) {
+        this.tamanhoDoRabo = tamanhoDoRabo;
+    }
+
+    private String getEstadoDeEspirito() {
+        return estadoDeEspirito;
+    }
+
+    private void setEstadoDeEspirito(String estadoDeEspirito) {
+        this.estadoDeEspirito = estadoDeEspirito;
+    }
 
     public void comer(){}
     public void latir(){
@@ -21,12 +69,12 @@ public class Cachorro {
 
     public String interagir(String acao){
         switch (acao) {
-            case "carinho" -> this.estadoDeEspirito = "feliz";
-            case "vai dormir" -> this.estadoDeEspirito = "bravo";
-            case "pisar na patinha" -> this.estadoDeEspirito = "triste";
-            default -> this.estadoDeEspirito = "Neutro";
+            case "carinho" -> setEstadoDeEspirito("feliz");
+            case "vai dormir" -> setEstadoDeEspirito("bravo");
+            case "pisar na patinha" -> setEstadoDeEspirito("triste");
+            default -> setEstadoDeEspirito("neutro");
         }
-        return this.estadoDeEspirito;
+        return getEstadoDeEspirito();
 
 
     }
