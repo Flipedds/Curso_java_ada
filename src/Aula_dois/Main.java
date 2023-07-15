@@ -3,8 +3,8 @@ package Aula_dois;
 import Aula_dois.Animais.Cachorro;
 import Aula_dois.Animais.Gato;
 import Aula_dois.Animais.Passaro;
+import Aula_dois.Lojas.Petshop;
 
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,11 +17,17 @@ public class Main {
         gatoUm.soar();
         passaroUm.soar();
 
-        System.out.println("Cachorros: "+Cachorro.getNumeroDeCachorros());
+        Petshop petshop = new Petshop();
 
-        System.out.println("Gatos: "+Gato.getNumeroDeGatos());
+        petshop.deixarNoHotel(cachorroUm);
+        System.out.println(cachorroUm.getEstadoDeEspirito());
 
-        System.out.println("Passaros: "+Passaro.getNumeroDePassaros());
+        petshop.darBanho(cachorroUm);
+        System.out.println(cachorroUm.getEstadoDeEspirito());
+
+        petshop.tosar(cachorroUm);
+        System.out.println(cachorroUm.getEstadoDeEspirito());
+
 
         /*
         System.out.println("O cachorro pegou uma " + cachorroUm.pegar());

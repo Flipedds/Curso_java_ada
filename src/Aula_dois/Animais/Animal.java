@@ -1,6 +1,6 @@
 package Aula_dois.Animais;
 
-public class Animal {
+public abstract class Animal {
     private String nome;
     private String cor;
     private int altura;
@@ -15,9 +15,9 @@ public class Animal {
         this.estadoDeEspirito = estadoDeEspirito;
     }
 
-    void comer(){}
-    void dormir(){}
-    void soar(){}
+    protected void comer(){}
+   protected void dormir(){}
+    public abstract void soar();
 
     public String getNome() {
         return nome;
@@ -33,6 +33,22 @@ public class Animal {
 
     public double getPeso() {
         return peso;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
     }
 
     public String getEstadoDeEspirito() {
